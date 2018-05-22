@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student1" class="springAOP.modal.Student">
+		<property name="studentId" value="S1"></property>
+		<property name="studentName" value="ravi"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student2" class="springAOP.modal.Student">
+		<property name="studentId" value="S2"></property>
+		<property name="studentName" value="kumar"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student3" class="springAOP.modal.Student">
+		<property name="studentId" value="S3"></property>
+		<property name="studentName" value="sai"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student4" class="springAOP.modal.Student">
+		<property name="studentId" value="S4"></property>
+		<property name="studentName" value="ram"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	
+	<bean id="student5" class="springAOP.modal.Student">
+		<property name="studentId" value="S5"></property>
+		<property name="studentName" value="sham"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student6" class="springAOP.modal.Student">
+		<property name="studentId" value="S6"></property>
+		<property name="studentName" value="ramana"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student7" class="springAOP.modal.Student">
+		<property name="studentId" value="S7"></property>
+		<property name="studentName" value="srinu"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	
+	<bean id="student8" class="springAOP.modal.Student">
+		<property name="studentId" value="S8"></property>
+		<property name="studentName" value="navin"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student9" class="springAOP.modal.Student">
+		<property name="studentId" value="S9"></property>
+		<property name="studentName" value="sri"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student10" class="springAOP.modal.Student">
+		<property name="studentId" value="S10"></property>
+		<property name="studentName" value="ganesh"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	
+	<bean id="student11" class="springAOP.modal.Student">
+		<property name="studentId" value="S11"></property>
+		<property name="studentName" value="raki"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student12" class="springAOP.modal.Student">
+		<property name="studentId" value="S12"></property>
+		<property name="studentName" value="anna"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student13" class="springAOP.modal.Student">
+		<property name="studentId" value="S13"></property>
+		<property name="studentName" value="avinash"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student14" class="springAOP.modal.Student">
+		<property name="studentId" value="S14"></property>
+		<property name="studentName" value="hary"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student15" class="springAOP.modal.Student">
+		<property name="studentId" value="S15"></property>
+		<property name="studentName" value="krish"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="student16" class="springAOP.modal.Student">
+		<property name="studentId" value="S16"></property>
+		<property name="studentName" value="vinod"></property>
+		<property name="address" ref="Address1"></property>
+	</bean>
+	<bean id="Address1" class="springAOP.modal.Address">
+		<property name="city" value="Visakapatnam"></property>
+		<property name="state" value="AndharaPradesh"></property>
+	</bean>
+	
+	<bean id="GetDetails" class="springAOP.GetDetails"></bean>
+	<bean id="aroundMethod" class="springAOP.AroundAdvisor"></bean>
+	
+	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="GetDetails"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>aroundMethod</value>
+			</list>
+		</property>
+		
+	</bean>
+	
+</beans>

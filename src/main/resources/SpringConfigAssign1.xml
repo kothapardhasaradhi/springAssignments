@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+   <bean id = "movie1" class = "SpringBasic.assignment1.modal.Movie" >
+   		<property name="movieId" value="M001"></property>
+   		<property name="movieName" value="The Firm"></property>
+   		<property name="movieActor" value="Tom Cruise"></property>
+   </bean>
+   
+   <bean id = "movie2" class = "SpringBasic.assignment1.modal.Movie" >
+   		<property name="movieId" value="M002"></property>
+   		<property name="movieName" value="Avengers"></property>
+   		<property name="movieActor" value="Ironman"></property>
+   </bean>
+   
+   <bean id = "movie3" class = "SpringBasic.assignment1.modal.Movie" >
+   		<property name="movieId" value="M003"></property>
+   		<property name="movieName" value="Spiderman"></property>
+   		<property name="movieActor" value="Peter"></property>
+   </bean>
+</beans>

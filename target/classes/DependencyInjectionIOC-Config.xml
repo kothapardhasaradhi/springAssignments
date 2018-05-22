@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="student1" class="DependencyInjectionIOC.modal.Student">
+		<property name="studentId" value="S001"></property>
+		<property name="studentName" value="Vimal"></property>
+		<property name="studentTest">
+			<list>
+				<ref bean="test1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="student2" class="DependencyInjectionIOC.modal.Student">
+		<property name="studentId" value="S002"></property>
+		<property name="studentName" value="Saradhi"></property>
+		<property name="studentTest">
+			<list>
+				<ref bean="test1"/>
+				<ref bean="test2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="test1" class="DependencyInjectionIOC.modal.Test">
+		<property name="testId" value="T001"></property>
+		<property name="testTitle" value="Data Structures"></property>
+		<property name="testMarks" value="100"></property>
+	</bean>
+	<bean id="test2" class="DependencyInjectionIOC.modal.Test">
+		<property name="testId" value="T002"></property>
+		<property name="testTitle" value="Algorithms"></property>
+		<property name="testMarks" value="100"></property>
+	</bean>
+	
+	<bean id="countryIndia" class="DependencyInjectionIOC.modal.Country">
+		<property name="countryId" value="IND"></property>
+		<property name="countryName" value="India"></property>
+	</bean>
+	
+	<bean id="countrySA" class="DependencyInjectionIOC.modal.Country">
+		<property name="countryId" value="SA"></property>
+		<property name="countryName" value="South Africa"></property>
+	</bean>
+	
+	<bean id="Kohli" class="DependencyInjectionIOC.modal.Player">
+		<property name="playerId" value="18"></property>
+		<property name="playerName" value="Virat Kohli"></property>
+		<property name="country" ref="countryIndia"></property>
+	</bean>
+	
+	<bean id="Dhoni" class="DependencyInjectionIOC.modal.Player">
+		<property name="playerId" value="7"></property>
+		<property name="playerName" value="MS Dhoni"></property>
+		<property name="country" ref="countryIndia"></property>
+	</bean>
+	
+	<bean id="Rohit" class="DependencyInjectionIOC.modal.Player">
+		<property name="playerId" value="45"></property>
+		<property name="playerName" value="Rohit Sharma"></property>
+		<property name="country" ref="countryIndia"></property>
+	</bean>
+	
+	<bean id="ABD" class="DependencyInjectionIOC.modal.Player">
+		<property name="playerId" value="17"></property>
+		<property name="playerName" value="AB De Villiers"></property>
+		<property name="country" ref="countrySA"></property>
+	</bean>
+	
+	<bean id="FAF" class="DependencyInjectionIOC.modal.Player">
+		<property name="playerId" value="18"></property>
+		<property name="playerName" value="Faf du Plessis"></property>
+		<property name="country" ref="countrySA"></property>
+	</bean>
+
+</beans>
