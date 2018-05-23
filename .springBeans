@@ -11,6 +11,7 @@
 		<config>src/main/resources/DependencyInjectionIOC-Config.xml</config>
 		<config>src/main/resources/springAOP-Config.xml</config>
 		<config>src/main/resources/springDataAccess-config.xml</config>
+		<config>src/main/resources/springDataAccessAssignment2-config.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

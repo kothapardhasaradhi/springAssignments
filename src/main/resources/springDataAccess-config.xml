@@ -15,15 +15,15 @@
 		<property name="dataSource" ref="dataSource"></property>  
 	</bean>
 	
-	<bean id="studentDao" class="springDataAccess.StudentDao">
+	<bean id="studentDao" class="springDataAccess.Assignment1.StudentDao">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>  
 	</bean>
 	
-	<bean id="GetDetails" class="springDataAccess.GetDetails">
+	<bean id="GetDetails" class="springDataAccess.Assignment1.GetDetails">
 		<property name="studentDao" ref="studentDao"></property>
 	</bean>
 	
-	<bean id="aroundMethod" class="springDataAccess.AroundAdvisor"></bean>
+	<bean id="aroundMethod" class="springDataAccess.Assignment1.AroundAdvisor"></bean>
 	
 	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="target" ref="GetDetails"></property>

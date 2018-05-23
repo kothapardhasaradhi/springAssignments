@@ -1,4 +1,4 @@
-package springDataAccess;
+package springDataAccess.Assignment1;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

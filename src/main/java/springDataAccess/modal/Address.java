@@ -1,10 +1,24 @@
 package springDataAccess.modal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="address")
 public class Address {
-		
-	private String city;
-	private String State;
+	
+	@Id
+	@Column(name="ADDRESS_ID")
 	private int Id;
+	@Column(name="CITY")
+	private String city;
+	@Column(name="STATE")
+	private String State;
+	
 	
 	public int getId() {
 		return Id;

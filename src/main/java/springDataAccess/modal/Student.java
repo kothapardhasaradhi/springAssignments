@@ -1,8 +1,24 @@
 package springDataAccess.modal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Students")
 public class Student {
+	
+	@Id
+	@Column(name="STUDENT_ID")
 	private String studentId ;
+	@Column(name="SYUDENT_NAME")
 	private String studentName;
+	@ManyToOne
+	@JoinColumn(name="ADDRESS_ID")
 	private Address address;
 	public String getStudentId() {
 		return studentId;

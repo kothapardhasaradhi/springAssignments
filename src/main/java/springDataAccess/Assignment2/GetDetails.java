@@ -1,4 +1,4 @@
-package springDataAccess.Assignment1;
+package springDataAccess.Assignment2;
 
 
 import java.util.List;

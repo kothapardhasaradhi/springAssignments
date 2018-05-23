@@ -1,4 +1,4 @@
-package springDataAccess.Assignment1;
+package springDataAccess.Assignment2;
 
 import org.aopalliance.intercept.MethodInterceptor;  
 import org.aopalliance.intercept.MethodInvocation;
