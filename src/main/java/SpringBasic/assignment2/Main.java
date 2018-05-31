@@ -2,10 +2,15 @@ package SpringBasic.assignment2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
 import SpringBasic.assignment1.modal.Movie;
+@Configuration
+@ComponentScan
 public class Main {
 	public static void main(String[] args) {
-		ApplicationContext applCtx = new AnnotationConfigApplicationContext("AppConfig.class");
+		ApplicationContext applCtx = new AnnotationConfigApplicationContext(AppConfig.class);
 		Movie movie1 =  applCtx.getBean("movie1",Movie.class);
 		Movie movie2 =  applCtx.getBean("movie2",Movie.class);
 		Movie movie3 =  applCtx.getBean("movie3",Movie.class);

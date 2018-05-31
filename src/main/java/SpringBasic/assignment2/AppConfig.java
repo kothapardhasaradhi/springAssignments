@@ -8,7 +8,7 @@ import SpringBasic.assignment1.modal.Movie;
 @Configuration
 public class AppConfig {
 	
-	@Bean
+	@Bean(name="movie1")
 	public Movie movie1(){
 		Movie movie = new Movie();
 		movie.setMovieId("M001");
@@ -16,7 +16,7 @@ public class AppConfig {
 		movie.setMovieActor("Tom Cruise");
 		return movie;
 	}
-	@Bean
+	@Bean(name="movie2")
 	public Movie movie2(){
 		Movie movie = new Movie();
 		movie.setMovieId("M002");
@@ -24,7 +24,7 @@ public class AppConfig {
 		movie.setMovieActor("Ironman");
 		return movie;
 	}
-	@Bean
+	@Bean(name="movie3")
 	public Movie movie3(){
 		Movie movie = new Movie();
 		movie.setMovieId("M003");
